@@ -149,7 +149,7 @@ class App extends Component {
 
   incrementEntries = async () => {
     try {
-      const response = await fetch('http://localhost:3001/image', 
+      const response = await fetch('https://gilbert-smart-brain.herokuapp.com/image', 
       {
         method: 'put',
         headers: {'Content-Type': 'application/json'},

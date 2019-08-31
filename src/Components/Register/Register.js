@@ -27,7 +27,7 @@ class Register extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        fetch('http://localhost:3001/register', {
+        fetch('https://gilbert-smart-brain.herokuapp.com/register', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
