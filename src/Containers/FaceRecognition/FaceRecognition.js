@@ -50,7 +50,7 @@ class FaceRecognition extends Component {
             this.setSearchState({loading: true, faceBoxes: []})
 
             if (isImageUrl(imageUrl)) {
-                const response = await fetch('https://gilbert-smart-brain.herokuapp.com/faceRecognition', {
+                const response = await fetch('https://gilbert-smart-brain-api.herokuapp.com/faceRecognition', {
                     method: 'post',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({

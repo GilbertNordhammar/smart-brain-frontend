@@ -26,7 +26,7 @@ class SignIn extends Component {
     
     handleSubmit = (event) => {
         event.preventDefault()
-        fetch('https://gilbert-smart-brain.herokuapp.com/signin', {
+        fetch('https://gilbert-smart-brain-api.herokuapp.com/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
