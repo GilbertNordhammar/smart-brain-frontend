@@ -1,10 +1,9 @@
 version: 2
-
 jobs:
   build:
     working_directory: ~/tmp
     docker:
-      - image: "cypress/base:10"
+      - image: 'cypress/base:10'
         environment:
           TERM: xterm
     steps:
@@ -14,7 +13,7 @@ jobs:
       - restore_cache:
           keys:
             - 'v2-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}'
-            - "v2-deps-{{ .Branch }}-"
+            - 'v2-deps-{{ .Branch }}-'
             - v2-deps-
       - run: npm ci
       - save_cache:
@@ -27,10 +26,10 @@ jobs:
           paths:
             - .cache
             - tmp
-  test:
+  test1:
     working_directory: ~/tmp
     docker:
-      - image: "cypress/base:10"
+      - image: 'cypress/base:10'
         environment:
           TERM: xterm
     steps:
@@ -39,18 +38,433 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests
-          command: $(npm bin)/cypress run
+          name: Running cypress tests 1
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/actions.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-
+  test2:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 2
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/aliasing.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test3:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 3
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/assertions.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test4:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 4
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/connectors.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test5:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 5
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/cookies.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test6:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 6
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/cypress_api.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test7:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 7
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/files.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test8:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 8
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/local_storage.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test9:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 9
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/location.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test10:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 10
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/misc.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test11:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 11
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/navigation.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test12:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 12
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/network_requests.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test13:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 13
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/querying.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test14:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 14
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/spies_stubs_clocks.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test15:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 15
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/traversal.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test16:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 16
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/utilities.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test17:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 17
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/viewport.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test18:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 18
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/waiting.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+  test19:
+    working_directory: ~/tmp
+    docker:
+      - image: 'cypress/base:10'
+        environment:
+          TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: ls -la cypress
+      - run: ls -la cypress/integration
+      - run:
+          name: Running cypress tests 19
+          command: >-
+            $(npm bin)/cypress run --spec
+            cypress/integration/examples/window.spec.js
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
-      - test:
+      - test1:
+          requires:
+            - build
+      - test2:
+          requires:
+            - build
+      - test3:
+          requires:
+            - build
+      - test4:
+          requires:
+            - build
+      - test5:
+          requires:
+            - build
+      - test6:
+          requires:
+            - build
+      - test7:
+          requires:
+            - build
+      - test8:
+          requires:
+            - build
+      - test9:
+          requires:
+            - build
+      - test10:
+          requires:
+            - build
+      - test11:
+          requires:
+            - build
+      - test12:
+          requires:
+            - build
+      - test13:
+          requires:
+            - build
+      - test14:
+          requires:
+            - build
+      - test15:
+          requires:
+            - build
+      - test16:
+          requires:
+            - build
+      - test17:
+          requires:
+            - build
+      - test18:
+          requires:
+            - build
+      - test19:
           requires:
             - build
