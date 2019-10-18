@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "CI:update": "node lib/generate-circle-config.js"
   },
   "eslintConfig": {
     "extends": "react-app"

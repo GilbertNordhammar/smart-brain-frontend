@@ -26,7 +26,7 @@ jobs:
           paths:
             - .cache
             - tmp
-  test1:
+  actions.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -38,15 +38,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 1
+          name: Running cypress test 'actions.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/actions.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/actions.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test2:
+  aliasing.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -58,15 +58,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 2
+          name: Running cypress test 'aliasing.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/aliasing.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/aliasing.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test3:
+  assertions.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -78,15 +78,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 3
+          name: Running cypress test 'assertions.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/assertions.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/assertions.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test4:
+  connectors.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -98,15 +98,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 4
+          name: Running cypress test 'connectors.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/connectors.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/connectors.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test5:
+  cookies.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -118,15 +118,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 5
+          name: Running cypress test 'cookies.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/cookies.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/cookies.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test6:
+  cypress_api.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -138,15 +138,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 6
+          name: Running cypress test 'cypress_api.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/cypress_api.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/cypress_api.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test7:
+  files.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -158,15 +158,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 7
+          name: Running cypress test 'files.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/files.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/files.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test8:
+  local_storage.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -178,15 +178,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 8
+          name: Running cypress test 'local_storage.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/local_storage.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/local_storage.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test9:
+  location.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -198,15 +198,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 9
+          name: Running cypress test 'location.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/location.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/location.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test10:
+  misc.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -218,15 +218,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 10
+          name: Running cypress test 'misc.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/misc.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/misc.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test11:
+  navigation.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -238,15 +238,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 11
+          name: Running cypress test 'navigation.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/navigation.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/navigation.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test12:
+  network_requests.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -258,15 +258,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 12
+          name: Running cypress test 'network_requests.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/network_requests.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/network_requests.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test13:
+  querying.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -278,15 +278,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 13
+          name: Running cypress test 'querying.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/querying.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/querying.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test14:
+  spies_stubs_clocks.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -298,15 +298,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 14
+          name: Running cypress test 'spies_stubs_clocks.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/spies_stubs_clocks.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/spies_stubs_clocks.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test15:
+  traversal.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -318,15 +318,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 15
+          name: Running cypress test 'traversal.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/traversal.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/traversal.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test16:
+  utilities.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -338,15 +338,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 16
+          name: Running cypress test 'utilities.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/utilities.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/utilities.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test17:
+  viewport.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -358,15 +358,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 17
+          name: Running cypress test 'viewport.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/viewport.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/viewport.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test18:
+  waiting.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -378,15 +378,15 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 18
+          name: Running cypress test 'waiting.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/waiting.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/waiting.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-  test19:
+  window.spec.js:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
@@ -398,10 +398,10 @@ jobs:
       - run: ls -la cypress
       - run: ls -la cypress/integration
       - run:
-          name: Running cypress tests 19
+          name: Running cypress test 'window.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec
-            cypress/integration/examples/window.spec.js
+            $(npm bin)/cypress run --spec cypress/integration/tests to
+            run/window.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -411,60 +411,60 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test1:
+      - actions.spec.js:
           requires:
             - build
-      - test2:
+      - aliasing.spec.js:
           requires:
             - build
-      - test3:
+      - assertions.spec.js:
           requires:
             - build
-      - test4:
+      - connectors.spec.js:
           requires:
             - build
-      - test5:
+      - cookies.spec.js:
           requires:
             - build
-      - test6:
+      - cypress_api.spec.js:
           requires:
             - build
-      - test7:
+      - files.spec.js:
           requires:
             - build
-      - test8:
+      - local_storage.spec.js:
           requires:
             - build
-      - test9:
+      - location.spec.js:
           requires:
             - build
-      - test10:
+      - misc.spec.js:
           requires:
             - build
-      - test11:
+      - navigation.spec.js:
           requires:
             - build
-      - test12:
+      - network_requests.spec.js:
           requires:
             - build
-      - test13:
+      - querying.spec.js:
           requires:
             - build
-      - test14:
+      - spies_stubs_clocks.spec.js:
           requires:
             - build
-      - test15:
+      - traversal.spec.js:
           requires:
             - build
-      - test16:
+      - utilities.spec.js:
           requires:
             - build
-      - test17:
+      - viewport.spec.js:
           requires:
             - build
-      - test18:
+      - waiting.spec.js:
           requires:
             - build
-      - test19:
+      - window.spec.js:
           requires:
             - build
