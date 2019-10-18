@@ -40,8 +40,8 @@ jobs:
       - run:
           name: Running cypress test 'actions.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/actions.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/actions.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -60,8 +60,8 @@ jobs:
       - run:
           name: Running cypress test 'aliasing.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/aliasing.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/aliasing.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -80,8 +80,8 @@ jobs:
       - run:
           name: Running cypress test 'assertions.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/assertions.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/assertions.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -100,8 +100,8 @@ jobs:
       - run:
           name: Running cypress test 'connectors.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/connectors.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/connectors.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -120,8 +120,8 @@ jobs:
       - run:
           name: Running cypress test 'cookies.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/cookies.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/cookies.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -140,8 +140,8 @@ jobs:
       - run:
           name: Running cypress test 'cypress_api.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/cypress_api.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/cypress_api.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -160,8 +160,8 @@ jobs:
       - run:
           name: Running cypress test 'files.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/files.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/files.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -180,8 +180,8 @@ jobs:
       - run:
           name: Running cypress test 'local_storage.spec.js'
           command: >-
-            $(npm bin)/cypress run --spec cypress/integration/tests to
-            run/local_storage.spec.js
+            $(npm bin)/cypress run --spec
+            cypress/integration/tests-to-run/local_storage.spec.js
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
